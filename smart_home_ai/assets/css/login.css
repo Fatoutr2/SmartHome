@@ -1,0 +1,144 @@
+/* ================================
+   Login Page - Smart Home AI
+   Avec animation fluide ✨
+=================================== */
+
+/* --- Fond de page --- */
+body {
+    background: linear-gradient(to bottom right, #001f3f, #0074D9);
+    background-image: url('../img/smart_home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* --- Overlay pour adoucir le fond --- */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* --- Boutons du coin supérieur --- */
+.nav-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    animation: slideDown 1.2s ease-out;
+}
+
+.nav-buttons a {
+    background-color: #00A8E8;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background-color: #007EA7;
+    transform: translateY(-2px);
+}
+
+/* --- Conteneur principal --- */
+.form-container {
+    max-width: 400px;
+    margin: 120px auto;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #003459;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.form-container .form-control {
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* --- Bouton principal --- */
+.btn-primary {
+    background-color: #00A8E8;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #007EA7;
+}
+
+/* --- Texte secondaire --- */
+.text-secondary {
+    font-size: 14px;
+}
+
+.text-secondary a {
+    color: #007EA7;
+    text-decoration: none;
+}
+
+.text-secondary a:hover {
+    text-decoration: underline;
+}
+
+/* --- Logo domotique --- */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeUp 1.5s ease-out;
+}
+
+.logo img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* --- Animations --- */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

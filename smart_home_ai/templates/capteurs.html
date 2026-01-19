@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capteurs - Smart Home</title>
+    <!-- ✅ Correction ici : retirer le "assets/" devant css -->
+    <link rel="stylesheet" href="{{ url_for('assets', filename='css/capteur.css') }}">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- ✅ Correction ici aussi -->
+            <img src="{{ url_for('assets', filename='img/logo.png') }}" alt="Logo Smart Home">
+            <span>Smart Home</span>
+        </div>
+        <ul class="menu">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/capteurs" class="active">Capteurs</a></li>
+            <!--<li><a href="/dashboard">Dashboard</a></li>-->
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <h1 class="title">📊 Liste des Capteurs</h1>
+
+        {% if capteurs %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Valeur</th>
+                    <th>Unité</th>
+                    <th>Date / Heure</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for capteur in capteurs %}
+                <tr>
+                    <td>{{ capteur.id }}</td>
+                    <td>{{ capteur.nom }}</td>
+                    <td>{{ capteur.valeur }}</td>
+                    <td>{{ capteur.unite }}</td>
+                    <td>{{ capteur.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p class="empty">Aucun capteur enregistré pour le moment.</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Smart Home Dashboard</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+/* ================================
+   Control Page - Smart Home AI
+   Dashboard moderne & lisible 🏠✨
+=================================== */
+
+/* --- Base --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fb;
+    background-image: url('../img/smart_home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #222;
+}
+
+/* --- Overlay doux --- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+.nav-buttons {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.nav-buttons a {
+    background: #00a6e889;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background-color: #0b688d90;
+    transform: translateY(-2px);
+}
+
+/* ================= CONTENEUR ================= */
+.container {
+    max-width: 1150px;
+    margin-top: 110px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+/* ================= TITRE ================= */
+h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 35px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+.clock {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ================= CARTES ================= */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card h5 {
+    font-weight: 700;
+    color: #003459;
+    margin-bottom: 15px;
+}
+
+/* ================= VALEURS CAPTEURS ================= */
+.sensor-value {
+    font-size: 34px;
+    font-weight: 700;
+    color: #007EA7;
+    margin-top: 10px;
+}
+
+/* ================= LAMPE ================= */
+#lamp-status {
+    font-size: 22px;
+    font-weight: 700;
+    width: 130px;
+    margin: 15px auto;
+    padding: 8px;
+    border-radius: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.lamp-on {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.lamp-off {
+    background: linear-gradient(135deg, #ff4d4d, #c0392b);
+    color: white;
+}
+
+/* ================= BOUTONS ================= */
+.btn-success,
+.btn-danger {
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-weight: 600;
+}
+
+.btn-success {
+    background-color: #2ECC40;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+}
+
+.btn-danger {
+    background-color: #FF4136;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* ================= SLIDER LUMINOSITÉ ================= */
+.form-range {
+    width: 85%;
+    margin: 10px auto;
+    color: white;
+}
+
+#brightness-value {
+    font-weight: 600;
+    color: #003459;
+}
+
+/* ================= PRESENCE ================= */
+#presence {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* ================= CONTROLE VOCAL ================= */
+.voice-btn,
+.btn-primary {
+    background-color: #00a6e889;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.voice-btn:hover,
+.btn-primary:hover {
+    background-color: #0b688d90;
+    transform: scale(1.05);
+}
+
+#voice-result {
+    font-style: italic;
+    margin-top: 12px;
+    color: #003459;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    color: #ffffff;
+    padding: 18px 0;
+    font-size: 14px;
+    background-color: rgba(20, 45, 56, 0.85);
+    margin-top: 50px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.lamp-on {
+    color: #28a745;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.lamp-off {
+    color: #dc3545;
+    font-size: 2rem;
+    font-weight: bold;
+}
