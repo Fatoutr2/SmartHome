@@ -48,15 +48,6 @@ MQTT
 
 ```text
 smart-home-esp32/
-├── esp32/
-│   └── main.py
-├── node-red/
-│   └── flows.json
-├── web/
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
-├── docs/
-│   └── architecture.png
+├── smart_home_ai/
 ├── .gitignore
 └── README.md
