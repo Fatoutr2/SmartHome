@@ -39,6 +39,12 @@ MQTT
 - MQTT (Mosquitto)
 - Node-RED
 - HTML / CSS / JavaScript
+- Python / Flask
+- Laragon
+- MySQL
+- DHT22
+- LDR
+- PIR
 - OLED SSD1306
 - PWM
 
